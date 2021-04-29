@@ -5,7 +5,7 @@ import sys
 
 def read_image(img_path, lang='eng'):
     try:
-        pytesseract.pytesseract.tesseract_cmd = 'E:\Tesseract-OCR\\tesseract'
+        pytesseract.pytesseract.tesseract_cmd = '/app/.apt/usr/bin/tesseract'
         return pytesseract.image_to_string(img_path, lang=lang)
     except:
         return "[ERROR] Unable to process file: {0}".format(img_path)
